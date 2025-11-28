@@ -1,0 +1,274 @@
+/* index_style.css with team logo sizing for match cards */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; 
+    color: #000000;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: auto;
+    height: 60px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #e6e6e6;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a.active, nav a:hover {
+    background-color: #00a8ff;
+    color: #ffffff;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.table-body img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    image-rendering: auto;
+    flex-shrink: 0;
+}
+
+.table-section h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.table-container {
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    padding: 20px;
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.standings-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.standings-table thead {
+    background-color: #e6e6e6;
+}
+
+.standings-table th {
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #00a8ff;
+    border-bottom: 2px solid #ccc;
+}
+
+.standings-table th.team {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.standings-table td {
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.standings-table td.position {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.standings-table td.team {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 20px;
+}
+
+.standings-table td.team img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    image-rendering: auto;
+    flex-shrink: 0;
+}
+
+.standings-table td.points {
+    font-weight: bold;
+    font-size: 16px;
+    color: #00cc55;
+}
+
+.standings-table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.standings-table tbody tr:hover {
+    background-color: #eaeaea;
+}
+
+.standings-table tbody tr.champions-league {
+    border-left: 4px solid #00a8ff;
+}
+
+.standings-table tbody tr.europa-league {
+    border-left: 4px solid #ff6600;
+}
+
+.standings-table tbody tr.conference-league {
+    border-left: 4px solid #00cc66;
+}
+
+.standings-table tbody tr.relegation {
+    border-left: 4px solid #ff0050;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.legend-color {
+    width: 30px;
+    height: 4px;
+}
+
+.legend-color.champions-league {
+    background-color: #00a8ff;
+}
+
+.legend-color.europa-league {
+    background-color: #ff6600;
+}
+
+.legend-color.conference-league {
+    background-color: #00cc66;
+}
+
+.legend-color.relegation {
+    background-color: #ff0050;
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 60px;
+    width: auto;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-nav li a:hover {
+    color: #00a8ff;
+}
+
+.footer-github a {
+    color: #000;
+    font-size: 34px;
+    transition: color 0.3s;
+}
+
+.footer-github a:hover {
+    color: #00a8ff;
+}
+
+@media (max-width: 768px) {
+    .standings-table {
+        font-size: 12px;
+    }
+    
+    .standings-table th, .standings-table td {
+        padding: 10px 5px;
+    }
+    
+    .standings-table td.team img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .table-body .team img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+    }
+    
+    .legend {
+        gap: 20px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
